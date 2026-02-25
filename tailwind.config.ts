@@ -22,6 +22,16 @@ export default {
         heading: ["var(--font-bungee)"],
         mono: ["var(--font-mono)"],
       },
+      // în tailwind.config.ts sub theme.extend:
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+          '50%': { transform: 'translateY(-20px) rotate(2deg)' },
+        }
+      },
+      animation: {
+        float: 'float 6s ease-in-out infinite',
+      }
     },
   },
   plugins: [],

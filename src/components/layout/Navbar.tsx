@@ -17,6 +17,7 @@ export default function Navbar() {
         <Link href="#menu" className="hover:text-brand-red transition-colors">Menu</Link>
         <Link href="#about" className="hover:text-brand-red transition-colors">Our Story</Link>
         <Link href="#locations" className="hover:text-brand-red transition-colors">Locations</Link>
+        <Link href="#contact" className="hover:text-brand-red font-black text-brand-red">Contact</Link>
       </div>
 
       {/* Butoane Acțiune */}
