@@ -6,6 +6,7 @@ import Image from "next/image";
 import Marquee from "@/components/sections/Marquee";
 import Footer from "@/components/sections/Footer"; 
 import Menu from "@/components/sections/Menu";
+import Locations from "@/components/sections/Locations";
 import Link from "next/link";
 export default function Home() {
   
@@ -50,7 +51,6 @@ export default function Home() {
           />
         </div>
       </section>
-      {/* MARQUEE SECTION */}
       <Marquee />
       {/* SECTION DIVIDER - STICKER PATTERN */}
       <section className="relative h-[40vh] w-full overflow-hidden border-y-4 border-brand-black">
@@ -61,7 +61,8 @@ export default function Home() {
         <div className="absolute inset-0 bg-brand-red/10 mix-blend-multiply" /> {/* Overlay discret */}
       </section>
       <Menu />
-      {/* FOOTER / OUTRO */}
+      <Locations />
+     
       <Footer />
     </main>
   );
