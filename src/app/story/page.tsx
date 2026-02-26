@@ -15,11 +15,11 @@ export default function StoryPage() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <p className="font-mono text-xl md:text-2xl leading-relaxed uppercase font-bold">
-            Pizzino nu a apărut într-o bucătărie liniștită. A apărut din nevoia de rebeliune împotriva aluatului industrial și a gustului plictisitor.
+          Pizzino wasn't born in a quiet kitchen. It emerged from the need to rebel against industrial dough and boring taste.
           </p>
           <div className="space-y-6 font-mono text-sm uppercase opacity-80">
-            <p>Fiecare pizza începe cu un proces de fermentare de 72 de ore. Nu trișăm. Nu grăbim haosul.</p>
-            <p>Folosim doar ingrediente care ar face-o pe bunica ta italiană să plângă de fericire (sau de invidie).</p>
+            <p>Every pizza starts with a 72-hour fermentation process. We don't cheat. We don't rush the chaos.</p>
+            <p>We only use ingredients that would make your Italian grandmother cry with joy (or envy).</p>
           </div>
         </div>
       </section>
@@ -58,7 +58,7 @@ export default function StoryPage() {
             <div className="space-y-8">
               <h3 className="font-heading text-4xl uppercase">The Signature Tee</h3>
               <p className="font-mono text-lg opacity-70 lowercase">
-                Bumbac greu, tăietură boxy și logoul care spune totul.
+              Heavyweight cotton, boxy fit, and the logo that says it all.
               </p>
               <button className="bg-brand-red text-brand-cream px-10 py-5 font-mono font-bold uppercase hover:bg-white hover:text-brand-red transition-colors">
                 Coming Soon
