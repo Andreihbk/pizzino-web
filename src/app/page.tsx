@@ -26,6 +26,13 @@ export default function Home() {
           </p>
           <Link 
             href="#menu" 
+            onClick={(e) => {
+              e.preventDefault(); // Prevenim "Sticky Hash" (URL-ul blocat)
+              const element = document.getElementById('menu');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' }); // Scroll fluid și sigur
+              }
+            }}
             className="mt-10 ml-2 inline-block bg-brand-black text-brand-cream px-8 py-4 font-mono text-lg font-bold uppercase hover:bg-brand-red transition-all hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#E23D28]"
           >
             See the menu

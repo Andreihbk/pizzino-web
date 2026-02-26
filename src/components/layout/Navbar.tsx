@@ -1,37 +1,52 @@
-"use client";
-
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 import { ShoppingBag } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-brand-cream/80 backdrop-blur-md border-b border-brand-black/10">
-      {/* Logo-ul cu fontul Brutalist */}
-      <Link href="/" className="font-heading text-2xl tracking-tighter text-brand-red">
-        PIZZINO
-      </Link>
+    <header className="fixed top-0 w-full z-50 bg-brand-cream/80 backdrop-blur-md border-b border-brand-black/5">
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        
+        {/* LOGO - Ne duce mereu pe pagina principală */}
+        <Link href="/" className="font-heading text-2xl tracking-tighter hover:text-brand-red transition-colors">
+          PIZZINO
+        </Link>
 
-      {/* Navigație Centrală - Stil Chitanță */}
-      <div className="hidden md:flex gap-8 font-mono text-sm font-bold uppercase">
-        <Link href="#menu" className="hover:text-brand-red transition-colors">Menu</Link>
-        <Link href="#about" className="hover:text-brand-red transition-colors">Our Story</Link>
-        <Link href="#locations" className="hover:text-brand-red transition-colors">Locations</Link>
-        <Link href="#contact" className="hover:text-brand-red font-black text-brand-red">Contact</Link>
-      </div>
+        {/* NAV LINKS - Centrate */}
+        <nav className="hidden md:flex items-center gap-8 font-mono text-sm font-bold uppercase">
+          {/* Folosim /#menu pentru a funcționa corect și de pe pagina /story */}
+          <Link href="/#menu" className="hover:text-brand-red transition-colors">
+            Menu
+          </Link>
+          
+          {/* Legătura către pagina nouă din src/app/story/page.tsx */}
+          <Link href="/story" className="hover:text-brand-red transition-colors">
+            Our Story
+          </Link>
 
-      {/* Butoane Acțiune */}
-      <div className="flex items-center gap-4">
-        <button className="relative p-2 hover:bg-brand-black/5 rounded-full transition-colors">
-          <ShoppingBag size={20} />
-          <span className="absolute top-0 right-0 bg-brand-red text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-mono">
-            0
-          </span>
-        </button>
-        <button className="bg-brand-black text-brand-cream px-5 py-2 font-mono text-sm font-bold uppercase hover:bg-brand-red transition-colors">
-          Order Now
-        </button>
+          <Link href="/#locations" className="hover:text-brand-red transition-colors">
+            Locations
+          </Link>
+
+          {/* Contact rămâne evidențiat cu roșu conform stilului tău */}
+          <Link href="/#contact" className="text-brand-red font-black border-b-2 border-brand-red">
+            Contact
+          </Link>
+        </nav>
+
+        {/* PARTEA DREAPTĂ - Shopping & Order */}
+        <div className="flex items-center gap-6">
+          <button className="relative hover:text-brand-red transition-colors">
+            <ShoppingBag size={20} strokeWidth={2.5} />
+            {/* Bulina roșie de notificare văzută în referințe */}
+            <span className="absolute -top-1 -right-1 w-2 h-2 bg-brand-red rounded-full"></span>
+          </button>
+          
+          <button className="font-mono text-xs md:text-sm font-bold uppercase border-2 border-brand-black px-4 py-1.5 hover:bg-brand-black hover:text-brand-cream transition-all">
+            Order Now
+          </button>
+        </div>
+
       </div>
-    </nav>
+    </header>
   );
 }
